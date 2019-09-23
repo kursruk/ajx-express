@@ -66,12 +66,23 @@ function aGetConnection()
     }) 
 }
 
+/**
+ * Send JSON error to the client
+ * @param e - Error info structure
+ * @param res - Response
+ */
 function sendError(e:any, res: Response)
 {  res.status(500).type('application/json').json(
     {error: true, info:e}
    );
 }
 
+/**
+ * Main Get Query
+ * @param req Request
+ * @param res Response
+ * @param query MySQL query Promise function
+ */
 async function get(req: Request, res: Response, query:pQueryFunction)
 {  try
    {  const d = await query('select * from sales_companies where cid=?',[280366]);       
