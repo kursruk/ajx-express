@@ -18,6 +18,7 @@
     "express": "^4.16.3",
     "microtime": "^2.1.8",
     "mysql": "^2.16.0",
+    "nodemon": "^1.19.2",
     "request": "^2.88.0",
     "typescript": "^3.0.1",
     "uuid": "^3.3.2"
